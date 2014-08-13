@@ -29,21 +29,25 @@
 {% endif %}
 
 <div class="article-author-side">
-  {% include _author-bio.html %}
+  <h3>Welcome to CSM</h3>
+  <img src="{{ site.url }}/images/team-thumb.jpg" class="bio-photo">
 </div>
 
 <div id="index">
-  <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
-  {% for post in site.posts limit:5 %}    
-  <article>
-    {% if post.link %}
-      <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
-    {% else %}
-      <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-    {% endif %}
-  </article>
-  {% endfor %}
+  <h1>Sharing the hope of Jesus</h1>
+
+  <blockquote>When you walk around the village you will see something different on the faces of the Christians. They have a joy they didn't have before. -- <em>Mathew</em></blockquote>
+
+  Welcome to the Christhia Seva Mission website.
+  We are located in the district of Chikbalapur (<a href="http://en.wikipedia.org/wiki/Chikkaballapur">Wikipedia</a>) in the state of Karnataka, India.
+  The mission was established in 1980 by Mathew and Mary Mathai.
+  Since then it has grown to over 300 villages reaching more than 4,000 people.
+
+  <h2>Stories of Christians</h2>
+
+  Our mission exists to share the gospel with people who want to hear about it.
+  You can read <a href="/stories/">stories from Christians</a> to learn more about how God is working through our mission.
+  
 </div><!-- /#index -->
 
 <div class="footer-wrap">
