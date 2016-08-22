@@ -13,7 +13,9 @@ image:
 There's a story behind every changed life.
 These stories capture the heart of our mission.
 
+
 <blockquote>
+<small>Names changed to protect privacy.<br><br></small>
 <p>
 Hello,
 <br><br>
@@ -49,4 +51,4 @@ Our family is from a Hindu High Caste but they allow me to go to church and pray
 <p>
 Your sister, Lakshmi.
 </p>
-</blockquote
+</blockquote>
