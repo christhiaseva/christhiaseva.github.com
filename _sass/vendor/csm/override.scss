@@ -1,0 +1,19 @@
+form {
+  &.csm {
+    input {
+      border-radius: 3px;
+      width: auto;
+    }
+    label {
+      margin-bottom: 2px;
+      margin-top: 10px;
+    }
+    button {
+      border-radius: 3px;
+      font-weight: bold;
+      margin-top: ;
+      background-color: #eee;
+      padding: 10px;
+    }
+  }
+}
