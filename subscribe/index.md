@@ -35,6 +35,9 @@ We would love to keep in touch and share what's going on in Chikkaballapur. Ente
       </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
       <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b7f97cc13a7dd413cb4b9f750_301d4c7116" tabindex="-1" value=""></div>
       <div class="clear"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button></div>
+      <div>
+        <a href="https://csmforchrist.us16.list-manage.com/unsubscribe?u=b7f97cc13a7dd413cb4b9f750&amp;id=301d4c7116" class="asterisk ">or click here to unsubscribe</a>
+      </div>
     </div>
   </form>
 </div>
