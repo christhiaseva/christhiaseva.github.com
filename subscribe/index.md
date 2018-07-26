@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Subscribe to Updates
+title: Join Our Mailing List
 tags: [about, Jekyll, theme, responsive]
 modified: 2018-07-25T20:53:07.573882-04:00
 comments: false
