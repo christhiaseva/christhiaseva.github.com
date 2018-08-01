@@ -18,7 +18,7 @@ Ready to get involved?
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
-  <form action="https://csmforchrist.us16.list-manage.com/subscribe/post?u=b7f97cc13a7dd413cb4b9f750&amp;id=301d4c7116" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate csm" target="_blank" novalidate>
+  <form action="https://csmforchrist.us16.list-manage.com/subscribe/post-json?u=b7f97cc13a7dd413cb4b9f750&id=301d4c7116&c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate csm" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
       <div class="mc-field-group">
         <label for="mce-EMAIL">Email Address  <span class="asterisk">(required)</span>
@@ -34,8 +34,8 @@ Ready to get involved?
         <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
       </div>
       <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
+        <div class="response" id="mce-error-response" style="display:none">There was a problem subscribing you.</div>
+        <div class="response" id="mce-success-response" style="display:none">You were successfully subscribed.</div>
       </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
       <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b7f97cc13a7dd413cb4b9f750_301d4c7116" tabindex="-1" value=""></div>
       <div class="clear"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Tell Me How To Get Involved</button></div>
@@ -45,6 +45,39 @@ Ready to get involved?
     </div>
     <div style="display:none;"><input type="checkbox" value="1" name="group[4649][1]" id="mce-group[4649]-4649-0" checked="checked"></div>
   </form>
+  <script type="text/javascript">
+    $(document).ready( function () {
+        // I only have one form on the page but you can be more specific if need be.
+        var $form = $('form');
+
+        if ( $form.length > 0 ) {
+            $('form input[type="submit"]').bind('click', function ( event ) {
+                if ( event ) event.preventDefault();
+                // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+                register($form);
+            });
+        }
+    });
+
+    function register($form) {
+        $.ajax({
+            type: $form.attr('method'),
+            url: $form.attr('action'),
+            data: $form.serialize(),
+            cache       : false,
+            dataType    : 'json',
+            contentType: "application/json; charset=utf-8",
+            error       : function(err) { $('.mce-success-response').hide(); $('.mce-error-response').show();  },
+            success     : function(data) {
+                if (data.result != "success") {
+                    $('.mce-success-response').hide(); $('.mce-error-response').show();
+                } else {
+                    $('.mce-error-response').hide(); $('.mce-success-response').show();
+                }
+            }
+        });
+    }
+  </script>
 </div>
 
 <h2>Keep reading to learn more.</h2>
