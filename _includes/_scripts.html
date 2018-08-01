@@ -1,3 +1,15 @@
+<div class="google-ads">
+  <!-- 320 x 50 ad -->
+  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="{{ site.owner.google.ad-client }}"
+       data-ad-slot="{{ site.owner.goodle.slot }}"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div><!-- /.google-ads -->
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="{{ site.url }}/assets/js/scripts.min.js"></script>
@@ -16,6 +28,39 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+<script type="text/javascript">
+  $(document).ready( function () {
+      // I only have one form on the page but you can be more specific if need be.
+      var $form = $('form.js');
+
+      if ( $form.length > 0 ) {
+          $('form input[type="submit"]').bind('click', function ( event ) {
+              if ( event ) event.preventDefault();
+              // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+              register($form);
+          });
+      }
+  });
+
+  function register($form) {
+      $.ajax({
+          type: $form.attr('method'),
+          url: $form.attr('action'),
+          data: $form.serialize(),
+          cache       : false,
+          dataType    : 'json',
+          contentType: "application/json; charset=utf-8",
+          error       : function(err) { $('.mce-success-response').hide(); $('.mce-error-response').show();  },
+          success     : function(data) {
+              if (data.result != "success") {
+                  $('.mce-success-response').hide(); $('.mce-error-response').show();
+              } else {
+                  $('.mce-error-response').hide(); $('.mce-success-response').show();
+              }
+          }
+      });
+  }
 </script>
 {% endif %}
 {% if page.comments %}
