@@ -18,7 +18,7 @@ Ready to get involved?
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
-  <form action="https://csmforchrist.us16.list-manage.com/subscribe/post-json?u=b7f97cc13a7dd413cb4b9f750&id=301d4c7116&c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate csm js" target="_blank" novalidate>
+  <form action="https://api.joule.run/jmathai/csm-email" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate csm js" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
       <div class="mc-field-group">
         <label for="mce-EMAIL">Email Address  <span class="asterisk">(required)</span>
