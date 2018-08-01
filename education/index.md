@@ -18,7 +18,7 @@ Ready to get involved?
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
-  <form action="https://api.joule.run/jmathai/csm-email" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate csm js" target="_blank" novalidate>
+  <form action="https://api.joule.run/jmathai/csm-emailer" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate csm js" novalidate>
     <div id="mc_embed_signup_scroll">
       <div class="mc-field-group">
         <label for="mce-EMAIL">Email Address  <span class="asterisk">(required)</span>
