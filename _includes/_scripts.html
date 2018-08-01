@@ -53,11 +53,7 @@
           contentType: "application/json; charset=utf-8",
           error       : function(err) { $('.mce-success-response').hide(); $('.mce-error-response').show();  },
           success     : function(data) {
-              if (data.result != "success") {
-                  $('.mce-success-response').hide(); $('.mce-error-response').show();
-              } else {
-                  $('.mce-error-response').hide(); $('.mce-success-response').show();
-              }
+              $('.mce-error-response').hide(); $('.mce-success-response').show();
           }
       });
   }
