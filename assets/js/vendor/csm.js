@@ -16,7 +16,7 @@
           type: $form.attr('method'),
           url: $form.attr('action'),
           //data: $form.serialize(),
-          data: $form.serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {});
+          data: $form.serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {}),
           cache       : false,
           dataType    : 'json',
           //processData: false,
