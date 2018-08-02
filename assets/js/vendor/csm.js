@@ -6,6 +6,7 @@
           $form.bind('submit', function ( event ) {
               if ( event ) event.preventDefault();
               // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
+              $('button', $form).html('Please Wait...');
               register($form);
           });
       }
@@ -15,16 +16,16 @@
       $.ajax({
           type: $form.attr('method'),
           url: $form.attr('action'),
-          //data: $form.serialize(),
-          //data: $form.serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {}),
           data: JSON.stringify($form.serializeArray().reduce(function(a, x) { a[x.name] = x.value; return a; }, {})),
           cache       : false,
           dataType    : 'json',
           processData: false,
           contentType: "application/json; charset=utf-8",
-          error       : function(err) { $('.mce-success-response').hide(); $('.mce-error-response').show();  },
+          error       : function(err) {
+            $('button', $form).html('Please Try Again');
           success     : function(data) {
-              $('.mce-error-response').hide(); $('.mce-success-response').show();
+            $('button', $form).html('Thanks! We Will Send An Email Shortly');
+            $('input, button', $form).attr('disabled', true);
           }
       });
   }
