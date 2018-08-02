@@ -23,6 +23,7 @@
           contentType: "application/json; charset=utf-8",
           error       : function(err) {
             $('button', $form).html('Please Try Again');
+          },
           success     : function(data) {
             $('button', $form).html('Thanks! We Will Send An Email Shortly');
             $('input, button', $form).attr('disabled', true);
