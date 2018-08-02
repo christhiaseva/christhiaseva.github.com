@@ -3,7 +3,7 @@
       var $form = $('form.js');
 
       if ( $form.length > 0 ) {
-          $form).bind('submit', function ( event ) {
+          $form.bind('submit', function ( event ) {
               if ( event ) event.preventDefault();
               // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
               register($form);
